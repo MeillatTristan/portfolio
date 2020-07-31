@@ -1,0 +1,17 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+
+<h1>Portfolio</h1>
+<div class="row flex">
+  {% for creation in creations %}
+    <div class="col-3">
+      <div class="card">
+        <h5 class="card-title">{{ creation.name }}</h5>
+      </div>
+      <p class="card-text">{{ creation.description}}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
